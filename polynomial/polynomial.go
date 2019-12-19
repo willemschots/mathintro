@@ -32,7 +32,7 @@ func (p Polynomial) String() string {
 	result := ""
 	for i, coefficient := range p {
 		if i == 0 {
-			result = fmt.Sprintf("%.1f", coefficient)
+			result = fmt.Sprintf("%g", coefficient)
 			continue
 		}
 		exponent := ""
@@ -44,7 +44,7 @@ func (p Polynomial) String() string {
 			seperator = "-"
 			coefficient *= -1.0
 		}
-		result = fmt.Sprintf("%s %s %.1fx%s", result, seperator, coefficient, exponent)
+		result = fmt.Sprintf("%s %s %gx%s", result, seperator, coefficient, exponent)
 	}
 
 	return result
